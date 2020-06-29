@@ -1,0 +1,44 @@
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imgCont {
+  height: 50vh;
+  width: 100%;
+}
+.backImg {
+  height: 100%;
+  width: 100%;
+}
+.mainSubmit {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: auto;
+  color: white;
+  z-index: 1;
+}
+.title {
+  font-size: 50px;
+}
+.triangle {
+  position: absolute;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-top: 400px solid black;
+}
+.pinkTriangle {
+  position: absolute;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 350px solid transparent;
+  border-right: 350px solid transparent;
+  border-top: 440px solid rgba(255, 0, 128, .2);
+}
