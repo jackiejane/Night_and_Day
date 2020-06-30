@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 class Main extends Component {
@@ -24,13 +25,13 @@ class Main extends Component {
         <div className='mainSubmit'>
           <h1 className='title'>Night / Day</h1>
           <input type='text' placeholder='email'></input>
-          <button>Submit</button>
+          <Link to='/day' ><button>Submit</button></Link>
         </div>
         <div className='imgCont'>
-        <img src='https://i.imgur.com/owonS9z.jpg' className='backImg'></img>
+        <img src='https://i.imgur.com/owonS9z.jpg' className='backImg'/>
         </div>
         <div className='imgCont'>
-        <img src={this.state.spaceImg} className='backImg'></img>
+        <img src={this.state.spaceImg} className='backImg'/>
         </div>
         <div class='pinkTriangle'></div>
         <div class='triangle'></div>
