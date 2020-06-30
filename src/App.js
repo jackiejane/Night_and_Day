@@ -2,9 +2,9 @@ import React from 'react';
 import Main from './Main'
 import { Route } from 'react-router-dom'
 import Day from './Day'
-import Night from'./Night'
+import Night from './Night'
+import Summary from './daySummary'
 import './App.css'
-
 
 function App() {
   return (
@@ -17,6 +17,9 @@ function App() {
       </Route>
       <Route path='/night'>
         <Night />
+      </Route>
+      <Route path='/summary'>
+        <Summary />
       </Route>
     </>
   );

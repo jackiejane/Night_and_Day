@@ -82,7 +82,16 @@ main{
   overflow-y: scroll;
   display: flex;
   justify-content: flex-start;
-
-
-
+}
+.night {
+  height: 100%;
+  width: 100%;
+}
+.nightInput {
+  position: absolute;
+  margin: auto;
+  height: 80%;
+  width: 80%;
+  background-color: rgb(250, 217, 217);
+  border: 2px solid black;
 }

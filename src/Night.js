@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 
-class Night extends Component {
+class Night extends Component{
   constructor() {
     super();
-  }
 
+    this.state = {
+      spaceImg: ''
+    }
+  }
+  async componentDidMount() {
+    try {
+      const data = await axios('https://api.nasa.gov/planetary/apod?api_key=dd9lylHuJlgwx0Mevlits2qeta0pbdkRKAyZUL1L')
+      this.setState({
+        spaceImg: data.data.hdurl
+      })
+    } catch (err) {
+      console.log(`This is your ${ err }`)
+    }
+  }
   render() {
     return (
       <main className='night'>
-        
+        <img src={this.state.spaceImg}></img>
         <div className='nightInput'>
           <div className='textClock'>
             <p className='text'>

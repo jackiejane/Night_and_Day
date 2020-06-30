@@ -11,15 +11,15 @@ class Main extends Component {
   }
   async componentDidMount() {
     try {
-      const data = await axios('https://api.nasa.gov/planetary/apod?api_key=6V3lD1ZXhzhly0FfuYlYahguFluFBpM3A3Nahz95')
+      const data = await axios('https://api.nasa.gov/planetary/apod?api_key=dd9lylHuJlgwx0Mevlits2qeta0pbdkRKAyZUL1L')
       this.setState({
         spaceImg: data.data.hdurl
       })
     } catch (err) {
-      console.log(`This is your ${ err }`)
+      console.log(`This is your ${err}`)
     }
   }
-    render() {
+  render() {
     return (
       <main>
         <div className='mainSubmit'>
@@ -28,13 +28,13 @@ class Main extends Component {
           <Link to='/day' ><button>Submit</button></Link>
         </div>
         <div className='imgCont'>
-        <img src='https://i.imgur.com/owonS9z.jpg' className='backImg'/>
+          <img src='https://i.imgur.com/owonS9z.jpg' className='backImg' />
         </div>
         <div className='imgCont'>
-        <img src={this.state.spaceImg} className='backImg'/>
+          <img src={this.state.spaceImg} className='backImg' />
         </div>
-        <div class='pinkTriangle'></div>
-        <div class='triangle'></div>
+        <div className='pinkTriangle'></div>
+        <div className='triangle'></div>
       </main>
     );
   }
