@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import './App.css'
 
 class Day extends Component {
   constructor() {
@@ -23,7 +24,6 @@ class Day extends Component {
     this.setState({
       sec: this.state.sec - 1
     })
-    console.log(this.state.sec)
     { this.timeKeeper() }
   }
   timeKeeper = () => {
@@ -49,16 +49,17 @@ class Day extends Component {
             <p className='text'>
               Take five minutes to write down whatever comes to mind.
             </p>
-            <button onClick={this.timeKeeper}>start</button>
             <div className='clock'>
-              <p>{this.state.min}:{this.state.sec ? this.state.sec : '00'}</p>
+              <p>{this.state.min}:
+              {this.state.sec > 9 ? this.state.sec : '0' + this.state.sec}
+              </p>
             </div>
           </div>
           <textarea type='text' className='writingCenter'
             placeholder='The timer will start once you begin to type.'
             onKeyDown={this.handleTimer}>
           </textarea>
-          <Link to='/night'><button>Submit</button></Link>
+          <Link to='/summary'><button>Submit</button></Link>
         </div>
       </main>
     );

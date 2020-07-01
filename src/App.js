@@ -3,9 +3,8 @@ import Main from './Main'
 import { Route } from 'react-router-dom'
 import Day from './Day'
 import Night from './Night'
-import Summary from './daySummary'
+import Summary from './Summary'
 import './App.css'
-
 function App() {
   return (
     <>
@@ -24,5 +23,4 @@ function App() {
     </>
   );
 }
-
 export default App;

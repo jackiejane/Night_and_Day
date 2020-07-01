@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import './App.css'
 import axios from 'axios'
 
 class Main extends Component {
@@ -12,8 +13,9 @@ class Main extends Component {
   async componentDidMount() {
     try {
       const data = await axios('https://api.nasa.gov/planetary/apod?api_key=dd9lylHuJlgwx0Mevlits2qeta0pbdkRKAyZUL1L')
+      console.log(data.data.url)
       this.setState({
-        spaceImg: data.data.hdurl
+        spaceImg: data.data.url
       })
     } catch (err) {
       console.log(`This is your ${err}`)
