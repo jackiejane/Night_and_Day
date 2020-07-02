@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Weather from './Weather'
+import Time from './Time'
 import './App.css'
 
 class Summary extends Component {
@@ -26,12 +27,19 @@ class Summary extends Component {
   }
   render() {
     return (
-      <main className='day' onLoad={this.getLocation}>
-        <div className='summaryInput'>
-          <h3>A Quote</h3>
-          <p><small><em>Words from a machine that may or may not be true and accurate.</em></small></p>
-          <p>{this.state.qod}<br /><small>-{this.state.author}</small></p>
-          <Weather />
+      <main className='SummaryMain'>
+        <div className='otherContainer'>
+          <div className='sumComp'>
+            <Time />
+          </div>
+          <div className='sumComp'>
+            <Weather />
+          </div>
+          <div className='sumComp'>
+            <h3>A Quote</h3>
+            <p><small><em>Words from a machine that might be fictional.</em></small></p>
+            <p>{this.state.qod}<br /><small>-{this.state.author}</small></p>
+          </div>
         </div>
         <div className='otherContainer'>
           <div className='profile'>Profile</div>

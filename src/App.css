@@ -97,21 +97,19 @@ main{
   background-color: rgb(250, 217, 217);
   border: 2px solid black;
 }
-.sumay {
+.SummaryMain {
   background-image: url(https://i.imgur.com/owonS9z.jpg);
   height: 100vh;
-  width: 100wh;
   background-size: cover;
   display: flex;
   flex-flow: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
-.summaryInput {
-  height: 80%;
-  width: 40%;
-  background-color: rgb(250, 217, 217);
+.sumComp {
+  background-color: rgba(250, 217, 217, .8);
   border: 2px solid black;
+  text-align: center;
+  padding: 10px;
 }
 .otherContainer {
   display: flex;
