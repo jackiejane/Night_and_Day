@@ -62,29 +62,59 @@ main{
   align-items: center;
   justify-content: space-around;
 }
+.dayTwo {
+  background-image: url(https://i.imgur.com/owonS9z.jpg);
+  height: 100vh;
+  width: 100wh;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+}
 .dayInput {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   height: 80%;
   width: 80%;
-  background-color: rgb(250, 217, 217);
+  background-color: hsla(0, 77%, 92%, 0.8);
   border: 2px solid black;
-  display: flex;
 }
 .textClock {
   display: flex;
   flex-direction: row;
   margin: 15px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .text{
-  width: 65%;
+  width: 100%;
   font-size: 20px;
 }
 .clock {
-  font-size: 30px;
-  width: 30%;
+  margin: 0;
+  height: 10vh;
+  width: 15vh;
   border: 1px solid black;
-  background-color: white;
+  background-color: hsla(0, 54%, 3%, 0.4);
   text-align: center;
+  font-size: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.dayClock {
+  margin: 0;
+  height: 10vh;
+  width: 15vh;
+  border: 1px solid black;
+  background-color: hsla(0, 54%, 3%, 0.4);
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .writingCenter {
   margin: 5px 10px 5px 10px;
@@ -106,12 +136,34 @@ main{
 }
 .nightInput {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
   height: 80%;
   width: 80%;
-  background-color: rgb(250, 217, 217);
-  border: 2px solid black;
+  background-color: rgba(58, 46, 46, 0.8);
+  border: 2px solid grey;
+  color: white;
 }
+.nightButton {
+align-self: center;
+background-color: hsla(0, 54%, 3%, 0.4);
+width: 20vw;
+height: 10vh;
+border: 2px solid white;
+color: white;
+font-size: 40px;
+}
+.dayButton {
+  align-self: center;
+  background-color: hsla(0, 54%, 3%, 0.4);
+  width: 20vw;
+  height: 10vh;
+  border: 2px solid white;
+  color: white;
+  font-size: 40px;
+  }
 .SummaryMain {
   background-image: url(https://i.imgur.com/owonS9z.jpg);
   height: 100vh;

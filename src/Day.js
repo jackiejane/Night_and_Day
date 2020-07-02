@@ -43,13 +43,13 @@ class Day extends Component {
   }
   render() {
     return (
-      <main className='day'>
+      <main className='dayTwo'>
         <div className='dayInput'>
           <div className='textClock'>
             <p className='text'>
               Take five minutes to write down whatever comes to mind.
             </p>
-            <div className='clock'>
+            <div className='dayClock'>
               <p>{this.state.min}:
               {this.state.sec > 9 ? this.state.sec : '0' + this.state.sec}
               </p>
@@ -59,7 +59,7 @@ class Day extends Component {
             placeholder='The timer will start once you begin to type.'
             onKeyDown={this.handleTimer}>
           </textarea>
-          <Link to='/summary'><button>Submit</button></Link>
+          <Link to='/summary'><button className='dayButton'>Submit</button></Link>
         </div>
       </main>
     );

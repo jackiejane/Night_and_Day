@@ -74,7 +74,7 @@ class Night extends Component {
             placeholder='The timer will start once you begin to type.'
             onKeyDown={this.handleTimer}>
           </textarea>
-          <Link to='/summary'><button>Submit</button></Link>
+          <Link to='/summary'><button className='nightButton'>Submit</button></Link>
         </div>
       </main>
     );
