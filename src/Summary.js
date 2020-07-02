@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '.env'
 import './App.css'
 
 class Summary extends Component {
@@ -18,8 +17,11 @@ class Summary extends Component {
         qod: data.data.quote.body,
         author: data.data.quote.author
       })
-      let res = await axios(`$https://api.weatherstack.com/current?access_key=${process.env.REACT_APP_API_KEY_WEATHER}&query=NewYork`)
-      console.log(res)
+      // let res = await axios(`$https://api.weatherstack.com/current
+      // ?access_key=${config}
+      // &query=NewYork
+      // &`)
+      // console.log(res)
     } catch (error) {
       console.log(`this is your ${error}`)
     }

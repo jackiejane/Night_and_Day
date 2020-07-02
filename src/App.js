@@ -6,6 +6,7 @@ import Night from './Night'
 import Summary from './Summary'
 import './App.css'
 function App() {
+  console.log(`${process.env.API_KEY}`)
   return (
     <>
       <Route path='/' exact>
