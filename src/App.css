@@ -32,7 +32,7 @@ main{
 }
 .title {
   font-size: 50px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .triangle {
   position: absolute;
@@ -120,7 +120,6 @@ main{
   margin: 5px 10px 5px 10px;
   height: 60%;
   width: 95%;
-  overflow-y: hidden;
   overflow-y: scroll;
   display: flex;
   justify-content: flex-start;
@@ -189,12 +188,13 @@ font-size: 40px;
 .profile {
   height: 10%;
   width: 100%;
-  background-color: rgb(250, 217, 217);
+  background-color: rgba(250, 217, 217, .8);
   border: 2px solid black;
 }
 .todo {
   height: 85%;
   width: 100%;
-  background-color: rgb(250, 217, 217);
+  overflow-y: scroll;
+  background-color: rgba(250, 217, 217, .8);
   border: 2px solid black;
 }

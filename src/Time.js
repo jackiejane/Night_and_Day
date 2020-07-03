@@ -101,7 +101,7 @@ class Time extends Component {
   render() {
     return (
       <>
-        <h1>{this.state.hour < 9 ? `0${this.state.hour}` : `${this.state.hour}`}:{this.state.minute < 9 ? `0${this.state.minute}` : `${this.state.minute}`}</h1>
+        <h1>{this.state.hour <= 9 ? `0${this.state.hour}` : `${this.state.hour}`}:{this.state.minute <= 9 ? `0${this.state.minute}` : `${this.state.minute}`}</h1>
         <h3>{this.state.day}, {this.state.month} {this.state.date}, {this.state.year}</h3>
       </>
     );

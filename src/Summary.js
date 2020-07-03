@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Weather from './Weather'
 import Time from './Time'
-import Todo from './todo'
+import Todo from './Todo'
 import './App.css'
 
 class Summary extends Component {
@@ -45,6 +45,7 @@ class Summary extends Component {
         <div className='otherContainer'>
           <div className='profile'>Profile</div>
           <div className='todo'>
+            <Todo />
           </div>
         </div>
       </main>
