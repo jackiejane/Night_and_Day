@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Quote extends Component {
+export default class Quote extends Component {
   constructor() {
     super();
     this.state = {
@@ -25,12 +25,10 @@ class Quote extends Component {
   render() {
     return (
       <div className='sumComp'>
-        <h3>A Quote</h3>
-        <p><small><em>Words from a machine that might be fictional.</em></small></p>
+        <h2>A Quote</h2>
+        <p><em>Words from a machine that might be fictional.</em></p>
         <p>{this.state.qod}<br /><small>-{this.state.author}</small></p>
       </div>
     )
   }
 }
-
-export default Quote

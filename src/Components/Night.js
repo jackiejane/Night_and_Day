@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import './App.css'
 import axios from 'axios'
 
 class Night extends Component {
@@ -74,7 +73,7 @@ class Night extends Component {
             placeholder='The timer will start once you begin to type.'
             onKeyDown={this.handleTimer}>
           </textarea>
-          <Link to='/summary'><button className='nightButton'>Submit</button></Link>
+          <Link to='/summary'><button className='subButton'>Submit</button></Link>
         </div>
       </main>
     );

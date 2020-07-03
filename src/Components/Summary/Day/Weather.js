@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './App.css'
+
 
 class Weather extends Component {
   constructor() {
@@ -61,29 +61,17 @@ class Weather extends Component {
   render() {
     return (
       <div className='sumComp'>
-        <h3>Weather for: {this.state.location}</h3>
+        <h2>Weather in {this.state.location}</h2>
         <img src={this.state.icon}></img><br />
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <p>Temperature: {this.state.farenheit}°F</p>
-              </td>
-              <td>
-                <p></p>
-              </td>
-              <td>
-                <p>Humidity: {this.state.humidity}%</p>
-              </td>
-              <td>
-                <p></p>
-              </td>
-              <td>
-                <p>Cloud Cover: {this.state.cloud}%</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-evenly'
+        }}>
+          <p><strong>Temperature:</strong><br />{this.state.farenheit}°F</p>
+          <p><strong>Humidity:</strong><br />{this.state.humidity}%</p>
+          <p><strong>Cloud Cover:</strong><br />{this.state.cloud}%</p>
+        </div>
       </div>
     );
   }

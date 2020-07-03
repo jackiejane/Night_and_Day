@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './App.css'
 
 class Day extends Component {
   constructor() {
@@ -43,12 +42,20 @@ class Day extends Component {
   }
   render() {
     return (
-      <main className='dayTwo'>
-        <div className='dayInput'>
+      <main className='day'
+        style={{
+          flex: 'display',
+          flexDirection: 'column'
+        }}>
+        <div className='sumComp'>
           <div className='textClock'>
-            <p className='text'>
-              Take five minutes to write down whatever comes to mind.
-            </p>
+            <div style={{
+              margin: '15px'
+            }}>
+              <p className='text'>
+                Take five minutes to write down whatever comes to mind.
+              </p>
+            </div>
             <div className='dayClock'>
               <p>{this.state.min}:
               {this.state.sec > 9 ? this.state.sec : '0' + this.state.sec}
@@ -57,13 +64,13 @@ class Day extends Component {
           </div>
           <textarea type='text' className='writingCenter'
             placeholder='The timer will start once you begin to type.'
-            onKeyDown={this.handleTimer}>
-          </textarea>
-          <Link to='/summary'><button className='dayButton'>Submit</button></Link>
+            onKeyDown={this.handleTimer}></textarea>
+          <div>
+            <Link to='/summary'><button className='subButton'>Submit</button></Link>
+          </div>
         </div>
       </main>
     );
   }
 }
-
 export default Day;

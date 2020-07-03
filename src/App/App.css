@@ -32,7 +32,7 @@ main{
 }
 .title {
   font-size: 50px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .triangle {
   position: absolute;
@@ -60,26 +60,7 @@ main{
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-around;
-}
-.dayTwo {
-  background-image: url(https://i.imgur.com/owonS9z.jpg);
-  height: 100vh;
-  width: 100wh;
-  background-size: cover;
-  display: flex;
-  flex-flow: column;
-}
-.dayInput {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
-  height: 80%;
-  width: 80%;
-  background-color: hsla(0, 77%, 92%, 0.8);
-  border: 2px solid black;
 }
 .textClock {
   display: flex;
@@ -117,12 +98,9 @@ main{
   justify-content: center;
 }
 .writingCenter {
-  margin: 5px 10px 5px 10px;
-  height: 60%;
-  width: 95%;
+  height: 60vh;
+  width: 60vw;
   overflow-y: scroll;
-  display: flex;
-  justify-content: flex-start;
 }
 .night {
   height: 100vh;
@@ -145,35 +123,25 @@ main{
   border: 2px solid grey;
   color: white;
 }
-.nightButton {
+.subButton {
 align-self: center;
 background-color: hsla(0, 54%, 3%, 0.4);
 width: 20vw;
 height: 10vh;
 border: 2px solid white;
 color: white;
-font-size: 40px;
-}
-.dayButton {
-  align-self: center;
-  background-color: hsla(0, 54%, 3%, 0.4);
-  width: 20vw;
-  height: 10vh;
-  border: 2px solid white;
-  color: white;
-  font-size: 40px;
-  }
-.SummaryMain {
-  background-image: url(https://i.imgur.com/owonS9z.jpg);
-  height: 100vh;
-  background-size: cover;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
+font-size: 30px;
 }
 .sumComp {
   background-color: rgba(250, 217, 217, .8);
   border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+}
+.nSumComp {
+  background-color: hsla(0, 54%, 3%, 1);
+  border: 2px solid black;
+  color: white;
   text-align: center;
   padding: 10px;
 }
@@ -185,16 +153,18 @@ font-size: 40px;
   width: 40%;
   background-color: transparent;
 }
-.profile {
-  height: 10%;
-  width: 100%;
-  background-color: rgba(250, 217, 217, .8);
-  border: 2px solid black;
-}
 .todo {
   height: 85%;
   width: 100%;
   overflow-y: scroll;
   background-color:rgba(250, 217, 217, .8);
   border: 2px solid black;
+}
+.nTodo {
+  height: 85%;
+  width: 100%;
+  overflow-y: scroll;
+  background-color: hsla(0, 54%, 3%, 1);
+  border: 2px solid black;
+  color: white,
 }
