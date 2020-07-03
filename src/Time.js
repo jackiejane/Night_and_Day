@@ -100,10 +100,10 @@ class Time extends Component {
 
   render() {
     return (
-      <>
+      <div className='sumComp'>
         <h1>{this.state.hour <= 9 ? `0${this.state.hour}` : `${this.state.hour}`}:{this.state.minute <= 9 ? `0${this.state.minute}` : `${this.state.minute}`}</h1>
         <h3>{this.state.day}, {this.state.month} {this.state.date}, {this.state.year}</h3>
-      </>
+      </div>
     );
   }
 }

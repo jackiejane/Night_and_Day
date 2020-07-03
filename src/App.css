@@ -195,6 +195,6 @@ font-size: 40px;
   height: 85%;
   width: 100%;
   overflow-y: scroll;
-  background-color: rgba(250, 217, 217, .8);
+  background-color:rgba(250, 217, 217, .8);
   border: 2px solid black;
 }

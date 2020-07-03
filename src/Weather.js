@@ -60,7 +60,7 @@ class Weather extends Component {
   }
   render() {
     return (
-      <>
+      <div className='sumComp'>
         <h3>Weather for: {this.state.location}</h3>
         <img src={this.state.icon}></img><br />
         <table>
@@ -84,7 +84,7 @@ class Weather extends Component {
             </tr>
           </tbody>
         </table>
-      </>
+      </div>
     );
   }
 }
