@@ -57,7 +57,9 @@ class Night extends Component {
   render() {
     return (
       <main className='night' style={{
-        backgroundImage: `url(${this.state.spaceImg})`
+        backgroundImage: `url(${this.state.spaceImg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
       }}>
         <div className='nightInput'>
           <div className='textClock'>

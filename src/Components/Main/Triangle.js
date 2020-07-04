@@ -36,7 +36,7 @@ export default class Triangle extends Component {
           <Link to='/night' className='mainSubmit'>
             <div>
               <h1 className='title'>/ Night /</h1>
-              <p>An app for self-reflection. <br /> For optimal experience, <br /> please allow the site access to your location. </p>
+              <p>An app for self-reflection.</p>
               <h1 className='title'>\ Day \</h1>
             </div>
           </Link>}

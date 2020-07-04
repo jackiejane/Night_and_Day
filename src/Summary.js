@@ -10,7 +10,7 @@ export default class Summary extends Component {
   constructor() {
     super();
     this.state = {
-      time: true
+      time: ''
     }
   }
   componentWillMount() {
@@ -30,7 +30,11 @@ export default class Summary extends Component {
     return (
       <>
         {this.state.time ?
-          <main className='day'>
+          <main className='day' style={{
+            display: 'flex',
+            flexFlow: 'row',
+            justifyContent: 'space-evenly'
+          }}>
             <div className='otherContainer'>
               <div className='sumComp'>
                 <Time />
@@ -61,9 +65,12 @@ export default class Summary extends Component {
             </div>
           </main>
           :
-          <main className='night' style={{
+          <main style={{
             background: `url('https://i.imgur.com/19vXbsV.jpg')`,
             backgroundSize: 'cover',
+            display: 'flex',
+            flexFlow: 'row',
+            justifyContent: 'space-evenly'
           }}>
             <div className='otherContainer'>
               <div className='nSumComp'>

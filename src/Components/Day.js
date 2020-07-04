@@ -56,7 +56,7 @@ class Day extends Component {
                 Take five minutes to write down whatever comes to mind.
               </p>
             </div>
-            <div className='dayClock'>
+            <div className='clock'>
               <p>{this.state.min}:
               {this.state.sec > 9 ? this.state.sec : '0' + this.state.sec}
               </p>
