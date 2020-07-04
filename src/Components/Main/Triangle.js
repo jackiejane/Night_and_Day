@@ -27,17 +27,17 @@ export default class Triangle extends Component {
         {this.state.time ?
           <Link to='/day' className='mainSubmit'>
             <div>
-              <h1 className='title'>/ Night /</h1>
+              <h1 className='title'> Night </h1>
               <p>An app for self-reflection.</p>
-              <h1 className='title'>\ Day \</h1>
+              <h1 className='title'> Day </h1>
             </div>
           </Link>
           :
           <Link to='/night' className='mainSubmit'>
             <div>
-              <h1 className='title'>/ Night /</h1>
+              <h1 className='title'> Night </h1>
               <p>An app for self-reflection.</p>
-              <h1 className='title'>\ Day \</h1>
+              <h1 className='title'> Day </h1>
             </div>
           </Link>}
         <div className='pinkTriangle'></div>

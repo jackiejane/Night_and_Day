@@ -13,7 +13,7 @@ img of homepage*/
   width: 100%;
   background-size: cover;
 }
-/* title refers to the 'Night'/'Day' 
+/* title refers to the 'Night'/'Day'
 title on the homepage */
 .title {
   font-size: 50px;
@@ -44,7 +44,7 @@ on the homepage*/
   position: absolute;
   border-left: 400px solid transparent;
   border-right: 400px solid transparent;
-  border-top: 500px solid rgba(255, 0, 128, .2);
+  border-top: 500px solid rgba(255, 91, 195, 0.5);
 }
 /* day is the background for day prompt */
 .day {
@@ -55,6 +55,7 @@ on the homepage*/
 .textClock {
   display: flex;
   flex-flow: row;
+  justify-content: space-between;
   margin: 15px;
   font-size: 20px;
 }
@@ -80,6 +81,8 @@ on the homepage*/
 /*night input is the contatiner for
 the night writing prompts*/
 .nightInput {
+  text-align: center;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;

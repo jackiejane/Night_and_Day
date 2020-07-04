@@ -52,7 +52,7 @@ class Day extends Component {
             <div style={{
               margin: '15px'
             }}>
-              <p className='text'>
+              <p>
                 Take five minutes to write down whatever comes to mind.
               </p>
             </div>
@@ -62,6 +62,12 @@ class Day extends Component {
               </p>
             </div>
           </div>
+          <div>
+            <label for="mood">Rate your current mood.</label>
+            <input type="range" id="mood" name="mood" min="0" max="10"></input>
+            <br />
+            <br />
+          </div>
           <textarea type='text' className='writingCenter'
             placeholder='The timer will start once you begin to type.'
             onKeyDown={this.handleTimer}></textarea>
@@ -69,7 +75,7 @@ class Day extends Component {
             <Link to='/summary'><button className='subButton'>Submit</button></Link>
           </div>
         </div>
-      </main>
+      </main >
     );
   }
 }

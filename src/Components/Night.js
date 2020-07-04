@@ -5,7 +5,6 @@ import axios from 'axios'
 class Night extends Component {
   constructor() {
     super();
-
     this.state = {
       spaceImg: '',
       min: 10,
@@ -59,23 +58,37 @@ class Night extends Component {
       <main className='night' style={{
         backgroundImage: `url(${this.state.spaceImg})`,
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
       }}>
-        <div className='nightInput'>
+        <div className='nSumComp' style={{
+          backgroundColor: 'rgba(58, 46, 46, 0.8)'
+        }}>
           <div className='textClock'>
-            <p className='text'>
-              Take 10 minutes to reflect on your day. What did you accomplish? What did you struggle with? jot down any thoughts you have as well as ideas for tomorrow.
-            </p>
+            <div style={{
+              margin: '15px'
+            }}>
+              <p>
+                Take 10 minutes to reflect on your day. What did you accomplish? What did you struggle with? jot down any thoughts you have as well as ideas for tomorrow.
+              </p>
+            </div>
             <div className='clock'>
               <p>{this.state.min}:
               {this.state.sec > 9 ? this.state.sec : '0' + this.state.sec}</p>
             </div>
           </div>
+          <div>
+            <label for="mood">Rate your current mood.</label>
+            <input type="range" id="mood" name="mood" min="0" max="10"></input>
+            <br />
+            <br />
+          </div>
           <textarea type='text' className='writingCenter'
             placeholder='The timer will start once you begin to type.'
             onKeyDown={this.handleTimer}>
           </textarea>
-          <Link to='/summary'><button className='subButton'>Submit</button></Link>
+          <div>
+            <Link to='/summary'><button className='subButton'>Submit</button></Link>
+          </div>
         </div>
       </main>
     );
