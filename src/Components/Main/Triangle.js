@@ -12,7 +12,8 @@ export default class Triangle extends Component {
     let today = new Date()
     let time1 = today.getHours()
     console.log(time1)
-    if (time1 > 18 && time1 < 6) {
+    console.log(time1)
+    if (time1 > 18) {
       this.setState({
         time: false
       })

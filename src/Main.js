@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import MainNight from '/Users/jacqueline-janedenney/General_Assembly/sei/constellations/Unit_2/project2/night_and_day/src/Components/Main/MainNight.js';
-import MainDay from '/Users/jacqueline-janedenney/General_Assembly/sei/constellations/Unit_2/project2/night_and_day/src/Components/Main/MainDay.js';
-import Triangle from '/Users/jacqueline-janedenney/General_Assembly/sei/constellations/Unit_2/project2/night_and_day/src/Components/Main/Triangle.js'
+import React from 'react'
+import MainNight from './Components/Main/MainNight';
+import MainDay from './Components/Main/MainDay';
+import Triangle from './Components/Main/Triangle'
 import './App.css'
+
 export default function Main() {
   return (
     <main>

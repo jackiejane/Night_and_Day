@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
 class Weather extends Component {
   constructor() {
     super();
@@ -60,9 +59,9 @@ class Weather extends Component {
   }
   render() {
     return (
-      <div className='sumComp'>
+      <div className='nSumComp'>
         <h2>Weather in {this.state.location}</h2>
-        <img src={this.state.icon}></img><br />
+        <img src={this.state.icon} alt='an icon describing the weather'></img><br />
         <div style={{
           display: 'flex',
           flexDirection: 'row',

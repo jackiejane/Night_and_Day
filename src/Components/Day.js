@@ -16,14 +16,14 @@ class Day extends Component {
         min: this.state.min - 1,
         sec: 59
       })
-      { this.timeKeeper() }
+      this.timeKeeper()
     }
   }
   subtractSec = () => {
     this.setState({
       sec: this.state.sec - 1
     })
-    { this.timeKeeper() }
+    this.timeKeeper()
   }
   timeKeeper = () => {
     if (this.state.sec > 0) {
@@ -37,7 +37,7 @@ class Day extends Component {
       this.setState({
         timerOn: false
       })
-      { this.timeKeeper() }
+      this.timeKeeper()
     }
   }
   render() {

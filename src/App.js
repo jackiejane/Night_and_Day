@@ -1,8 +1,8 @@
 import React from 'react';
 import Main from './Main'
 import { Route } from 'react-router-dom'
-import Day from '/Users/jacqueline-janedenney/General_Assembly/sei/constellations/Unit_2/project2/night_and_day/src/Components/Day.js'
-import Night from '/Users/jacqueline-janedenney/General_Assembly/sei/constellations/Unit_2/project2/night_and_day/src/Components/Night.js'
+import Day from './Components/Day'
+import Night from './Components/Night'
 import Summary from './Summary'
 import './App.css'
 

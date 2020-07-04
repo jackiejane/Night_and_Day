@@ -60,9 +60,9 @@ class Weather extends Component {
   }
   render() {
     return (
-      <div className='nSumComp'>
+      <div className='sumComp'>
         <h2>Weather in {this.state.location}</h2>
-        <img src={this.state.icon}></img><br />
+        <img src={this.state.icon} alt='an icon describing the current weather'></img><br />
         <div style={{
           display: 'flex',
           flexDirection: 'row',
