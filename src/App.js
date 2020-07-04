@@ -1,8 +1,7 @@
 import React from 'react';
 import Main from './Main'
 import { Route } from 'react-router-dom'
-import Day from './Components/Day'
-import Night from './Components/Night'
+import Dayz from './dayz'
 import Summary from './Summary'
 import './App.css'
 
@@ -13,10 +12,7 @@ function App() {
         <Main />
       </Route>
       <Route path='/day'>
-        <Day />
-      </Route>
-      <Route path='/night'>
-        <Night />
+        <Dayz />
       </Route>
       <Route path='/summary'>
         <Summary />

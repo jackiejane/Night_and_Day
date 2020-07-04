@@ -30,11 +30,7 @@ export default class Summary extends Component {
     return (
       <>
         {this.state.time ?
-          <main className='day' style={{
-            display: 'flex',
-            flexFlow: 'row',
-            justifyContent: 'space-evenly'
-          }}>
+          <main className='daySub'>
             <div className='otherContainer'>
               <div className='sumComp'>
                 <Time />
