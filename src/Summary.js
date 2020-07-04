@@ -21,7 +21,6 @@ export default class Summary extends Component {
   componentWillMount() {
     let today = new Date()
     let time1 = today.getHours()
-    console.log(time1)
     if (time1 > 18) {
       this.setState({
         time: false

@@ -1,30 +1,8 @@
 import React, { Component } from 'react';
 
-class Time extends Component {
+export default class NTime extends Component {
   constructor() {
     super();
-    this.setState({
-      date: '',
-      month: '',
-      year: '',
-      day: '',
-      hour: '',
-      minute: '',
-    })
-  }
-  tick() {
-    const today = new Date()
-    let hour1 = today.getHours()
-    let minutes1 = today.getMinutes()
-    let date1 = (today.getDay()) - 2
-    this.setState({
-      date: date1,
-      hour: hour1,
-      minute: minutes1,
-    })
-  }
-
-  componentWillMount() {
     const today = new Date()
     let date1 = (today.getDay()) - 2
     let month1 = today.getMonth()
@@ -74,16 +52,26 @@ class Time extends Component {
     } else if (month1 === 11) {
       month2 = 'December'
     }
-    this.setState({
+    this.state = {
       date: date1,
       month: month2,
       year: year1,
       day: day2,
       hour: hour1,
       minute: minutes1,
+    }
+  }
+  tick() {
+    const today = new Date()
+    let hour1 = today.getHours()
+    let minutes1 = today.getMinutes()
+    let date1 = (today.getDay()) - 2
+    this.setState({
+      date: date1,
+      hour: hour1,
+      minute: minutes1,
     })
   }
-
   componentDidMount() {
     try {
       this.intervalID = setInterval(
@@ -97,7 +85,6 @@ class Time extends Component {
   componentWillUnmount() {
     clearInterval(this.intervalID);
   }
-
   render() {
     return (
       <div className='nSumComp'>
@@ -107,5 +94,3 @@ class Time extends Component {
     );
   }
 }
-
-export default Time;
