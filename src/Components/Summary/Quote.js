@@ -24,11 +24,11 @@ export default class Quote extends Component {
 
   render() {
     return (
-      <div className='sumComp'>
+      <>
         <h2>A Quote</h2>
         <p><em>Words from a machine that might be fictional.</em></p>
         <p>{this.state.qod}<br /><small>-{this.state.author}</small></p>
-      </div>
+      </>
     )
   }
 }

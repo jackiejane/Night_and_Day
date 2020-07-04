@@ -4,18 +4,13 @@ import Weather from './Components/Summary/Weather'
 import Quote from './Components/Summary/Quote';
 import Todo from './Components/Summary/Todo'
 import Profile from './Components/Summary/Profile'
-import NTime from './Components/Summary/NTime'
-import NWeather from './Components/Summary/NWeather'
-import NQuote from './Components/Summary/NQuote';
-import NTodo from './Components/Summary/NTodo'
-import NProfile from './Components/Summary/NProfile'
 import './App.css'
 
 export default class Summary extends Component {
   constructor() {
     super();
     this.state = {
-      time: ''
+      time: true
     }
   }
   componentWillMount() {
@@ -37,29 +32,64 @@ export default class Summary extends Component {
         {this.state.time ?
           <main className='day'>
             <div className='otherContainer'>
-              <Time />
-              <Weather />
-              <Quote />
+              <div className='sumComp'>
+                <Time />
+              </div>
+              <div className='sumComp'>
+                <Weather />
+              </div>
+              <div className='sumComp'>
+                <Quote />
+              </div>
             </div>
             <div className='otherContainer'>
-              <Profile />
-              <Todo />
+              <div className='sumComp'>
+                <Profile />
+              </div>
+              <div className='todo'>
+                <div style={{
+                  textAlign: 'center'
+                }}>
+                  <h2>Notes and Reminders</h2>
+                </div>
+                <div style={{
+                  height: '85%'
+                }}>
+                  <Todo />
+                </div>
+              </div>
             </div>
           </main>
           :
           <main className='night' style={{
             background: `url('https://i.imgur.com/19vXbsV.jpg')`,
             backgroundSize: 'cover',
-
           }}>
             <div className='otherContainer'>
-              <NTime />
-              <NWeather />
-              <NQuote />
+              <div className='nSumComp'>
+                <Time />
+              </div>
+              <div className='nSumComp'>
+                <Weather />
+              </div>
+              <div className='nSumComp'>
+                <Quote />
+              </div>
             </div>
             <div className='otherContainer'>
-              <NProfile />
-              <NTodo />
+              <div className='nSumComp'>
+                <Profile />
+              </div>
+              <div className='nTodo'>
+                <div className='nSumComp'>
+                  <h2>Notes and Reminders</h2>
+                </div>
+                <div style={{
+                  height: '85%'
+                }}>
+                  <Todo />
+                </div>
+              </div>
             </div>
           </main>}
       </>

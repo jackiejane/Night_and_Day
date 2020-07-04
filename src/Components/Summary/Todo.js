@@ -17,12 +17,7 @@ export default class Todo extends Component {
   }
   render() {
     return (
-      <div className='todo'>
-        <div style={{
-          textAlign: 'center'
-        }}>
-          <h2>Notes and Reminders</h2>
-        </div>
+      <>
         <ReactQuill
           value={this.state.text}
           onChange={this.handleChange}
@@ -30,7 +25,7 @@ export default class Todo extends Component {
           style={{
             height: '94%'
           }}></ReactQuill>
-      </div>
+      </>
     )
   }
 }

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
-class Weather extends Component {
+export default class Weather extends Component {
   constructor() {
     super();
     this.state = {
@@ -60,7 +59,7 @@ class Weather extends Component {
   }
   render() {
     return (
-      <div className='sumComp'>
+      <>
         <h2>Weather in {this.state.location}</h2>
         <img src={this.state.icon} alt='an icon describing the current weather'></img><br />
         <div style={{
@@ -72,9 +71,7 @@ class Weather extends Component {
           <p><strong>Humidity:</strong><br />{this.state.humidity}%</p>
           <p><strong>Cloud Cover:</strong><br />{this.state.cloud}%</p>
         </div>
-      </div>
+      </>
     );
   }
 }
-
-export default Weather;
