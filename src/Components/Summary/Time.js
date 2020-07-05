@@ -4,7 +4,7 @@ export default class Time extends Component {
   constructor() {
     super();
     const today = new Date()
-    let date1 = (today.getDay()) - 2
+    let date1 = today.getDate()
     let month1 = today.getMonth()
     let year1 = today.getUTCFullYear()
     let day1 = today.getDay()
@@ -65,11 +65,9 @@ export default class Time extends Component {
     const today = new Date()
     let hour1 = today.getHours()
     let minutes1 = today.getMinutes()
-    let date1 = (today.getDay()) - 2
     this.setState({
-      date: date1,
       hour: hour1,
-      minute: minutes1,
+      minute: minutes1
     })
   }
   componentDidMount() {

@@ -3,7 +3,6 @@ import Time from './Components/Summary/Time'
 import Weather from './Components/Summary/Weather'
 import Quote from './Components/Summary/Quote';
 import Todo from './Components/Summary/Todo'
-import Profile from './Components/Summary/Profile'
 import './App.css'
 
 export default class Summary extends Component {
@@ -16,7 +15,7 @@ export default class Summary extends Component {
   componentWillMount() {
     let today = new Date()
     let time1 = today.getHours()
-    if (time1 > 18) {
+    if (time1 > 18 || time1 < 6) {
       this.setState({
         time: false
       })
@@ -30,71 +29,56 @@ export default class Summary extends Component {
     return (
       <>
         {this.state.time ?
-          <main className='daySub'>
-            <div className='otherContainer'>
-              <div className='sumComp'>
-                <Time />
+          <section className='daySub'>
+            <div className='sum'>
+              <Time />
+            </div>
+            <div className='sum'>
+              <Weather />
+            </div>
+            <div className='sum'>
+              <Quote />
+            </div>
+            <div className='todo'>
+              <div style={{
+                textAlign: 'center'
+              }}>
+                <h2>Notes and Reminders</h2>
               </div>
-              <div className='sumComp'>
-                <Weather />
-              </div>
-              <div className='sumComp'>
-                <Quote />
+              <div style={{
+                height: '85%'
+              }}>
+                <Todo />
               </div>
             </div>
-            <div className='otherContainer'>
-              <div className='sumComp'>
-                <Profile />
-              </div>
-              <div className='todo'>
-                <div style={{
-                  textAlign: 'center'
-                }}>
-                  <h2>Notes and Reminders</h2>
-                </div>
-                <div style={{
-                  height: '85%'
-                }}>
-                  <Todo />
-                </div>
-              </div>
-            </div>
-          </main>
+          </section>
           :
-          <main style={{
-            background: `url('https://i.imgur.com/19vXbsV.jpg')`,
-            backgroundSize: 'cover',
-            display: 'flex',
-            flexFlow: 'row',
-            justifyContent: 'space-evenly'
+          <section className='daySub' style={{
+            backgroundImage: `url('https://i.imgur.com/19vXbsV.jpg')`
           }}>
-            <div className='otherContainer'>
-              <div className='nSumComp'>
-                <Time />
+            <div className='nSum'>
+              <Time />
+            </div>
+            <div className='nSum'>
+              <Weather />
+            </div>
+            <div className='nSum'>
+              <Quote />
+            </div>
+            <div className='nTodo'>
+              <div style={{
+                textAlign: 'center',
+                color: 'white'
+              }}>
+                <h2>Notes and Reminders</h2>
               </div>
-              <div className='nSumComp'>
-                <Weather />
-              </div>
-              <div className='nSumComp'>
-                <Quote />
+              <div style={{
+                height: '85%'
+              }}>
+                <Todo />
               </div>
             </div>
-            <div className='otherContainer'>
-              <div className='nSumComp'>
-                <Profile />
-              </div>
-              <div className='nTodo'>
-                <div className='nSumComp'>
-                  <h2>Notes and Reminders</h2>
-                </div>
-                <div style={{
-                  height: '85%'
-                }}>
-                  <Todo />
-                </div>
-              </div>
-            </div>
-          </main>}
+          </section>}
       </>
     )
   }

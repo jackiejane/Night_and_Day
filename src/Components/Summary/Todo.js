@@ -23,7 +23,9 @@ export default class Todo extends Component {
           onChange={this.handleChange}
           placeholder='Use this area to keep notes and reminders.'
           style={{
-            height: '94%'
+            height: '100%',
+            backgroundColor: 'white',
+            color: 'black'
           }}></ReactQuill>
       </>
     )
