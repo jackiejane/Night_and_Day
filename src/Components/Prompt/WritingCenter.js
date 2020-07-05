@@ -48,6 +48,7 @@ export default class WritingCenter extends Component {
       text: value
     })
   }
+
   render() {
     return (
       <>
@@ -64,7 +65,7 @@ export default class WritingCenter extends Component {
             value={this.state.text}
             onChange={this.handleChange}
             onKeyDown={this.handleTimer}
-            placeholder='Use this area to keep 
+            placeholder='Use this area to keep
           notes and reminders.'>
           </ReactQuill>
         </div>
