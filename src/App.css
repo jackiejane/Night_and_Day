@@ -31,8 +31,6 @@ the homepage*/
   text-align: center;
   text-decoration: none;
   color: white;
-  height: 40vh;
-  width: 17%;
   z-index: 1;
 }
 /* triangle is the black triangle
@@ -79,6 +77,7 @@ Prompt Page*/
   align-items: center;
   height: 75vh;
   width: 95vw;
+  max-width: 600px;
 }
 /* text area for day and night prompts*/
 .writingCenter {
@@ -149,16 +148,10 @@ on prompt pages*/
   background-color: rgba(58, 46, 46, 0.8);
   border: 2px solid black;
 }
-/*below media query is specified for ipad pro*/
-@media (max-width: 1300px) {
-  .mainSubmit {
-    display: flex;
-    align-items: center;
-  }
+ @media (max-width: 810px) {
   .title {
-    align-self: center;
-    margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 38px;
+    margin: 0;
   }
   .triangle {
     border-left: 175px solid transparent;
@@ -166,50 +159,48 @@ on prompt pages*/
     border-top: 275px solid black;
   }
   .pinkTriangle {
-    border-left: 250px solid transparent;
-    border-right: 250px solid transparent;
+    border-left: 275px solid transparent;
+    border-right: 275px solid transparent;
     border-top: 375px solid rgba(255, 91, 195, 0.5);
   }
-  .otherContainer {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    height: 70%;
-    width: 40%;
+  .clock {
+    font-size: 30px;
   }
-}
-/* below media query is specified for ipad pro*/
-@media (max-width: 800px) {
-  .mainSubmit {
-    display: flex;
-    align-items: center;
-    height: 5vh;
-    font-size: 10px;
+  .daySub {
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    height: 150vh;
+  }
+  .sum {
+    width: 85%;
+    font-size: 13px;
+    margin: 25px;
+    justify-content: space-evenly;
+  }
+  .todo {
+    width: 75%;
+    height: 75vh;
+    font-size: 13px;
+    margin: 25px;
+  }
+ }
+/*below media query is specified for iphone SE */
+@media (max-width: 600px) {
+  .daySub {
+    height: 200vh;
   }
   .title {
-    align-self: center;
-    font-size: 17px;
-    margin: 0
+    font-size: 25px;
+    margin: 0;
   }
   .triangle {
     border-left: 125px solid transparent;
     border-right: 125px solid transparent;
-    border-top: 170px solid black;
+    border-top: 225px solid black;
   }
   .pinkTriangle {
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-top: 195px solid rgba(255, 91, 195, 0.5);
-  }
-  .day{
-    display: flex;
-    flex-direction: column;
-  }
-  .otherContainer {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    height: 70%;
-    width: 40%;
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-top: 275px solid rgba(255, 91, 195, 0.5);
   }
 }
