@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from './Main'
 import { Route } from 'react-router-dom'
-import Dayz from './dayz'
+import Prompt from './Prompt'
 import Summary from './Summary'
 import './App.css'
 
@@ -11,8 +11,8 @@ function App() {
       <Route path='/' exact>
         <Main />
       </Route>
-      <Route path='/day'>
-        <Dayz />
+      <Route path='/prompt'>
+        <Prompt />
       </Route>
       <Route path='/summary'>
         <Summary />

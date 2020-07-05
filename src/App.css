@@ -46,11 +46,6 @@ on the homepage*/
   border-right: 400px solid transparent;
   border-top: 500px solid rgba(255, 91, 195, 0.5);
 }
-/* day is the background for day prompt */
-.day {
-  background-image: url(https://i.imgur.com/owonS9z.jpg);
-  background-size: cover;
-}
 /* countdown clock component*/
 .clock {
   position: absolute;
@@ -60,17 +55,17 @@ on the homepage*/
   height: 5vh;
   width: 10vh;
   padding: 10px;
-  margin: 25px;
+  margin: 10px;
   top: 0;
   right: 0;
-  border: 1px solid black;
-  background-color: hsla(0, 54%, 3%, 0.4);
+  border: 2px solid black;
+  background-color:rgba(58, 46, 46, 0.8);
   font-size: 40px;
   color: white;
 }
-/*prompt is the container for content on the 
+/*prompt is the container for content on the
 Prompt Page*/
-.prompt {
+.dayPrompt {
   background-color: rgba(250, 217, 217, .8);
   border: 2px solid black;
   display: flex;
@@ -117,17 +112,6 @@ the night writing prompts*/
 } */
 /* subButton is the submit button
 on prompt pages*/
-.subButton {
-margin: 10px;
-padding: 10px;
-align-self: center;
-background-color: hsla(0, 54%, 3%, 0.4);
-border: 2px solid white;
-color: white;
-/* font-size: 3px; */
-}
-/* sumComp is a catch all container
-for day pages*/
 .sumComp {
   background-color: rgba(250, 217, 217, .8);
   border: 2px solid black;
@@ -180,7 +164,7 @@ summary page into two columns*/
   border: 2px solid black;
   color: white,
 }
-/* below media query is specified for ipad pro*/
+below media query is specified for ipad pro
 @media (max-width: 1300px) {
   .mainSubmit {
     display: flex;

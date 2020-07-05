@@ -56,7 +56,9 @@ export default class WritingCenter extends Component {
             {this.state.sec > 9 ? this.state.sec : '0' + this.state.sec}
           </p>
         </div>
-        <div className='writingCenter'>
+        <div className='writingCenter' style={{
+          color: 'black'
+        }}>
           <ReactQuill
             className='textEditor'
             value={this.state.text}
