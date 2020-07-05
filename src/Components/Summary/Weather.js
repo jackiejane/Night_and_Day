@@ -38,10 +38,8 @@ export default class Weather extends Component {
   async componentDidUpdate() {
     try {
       if (this.state.stopcall === false) {
-        const API = API
-        const url = `https://api.weatherstack.com/forecast?access_key=${API}&query=${this.state.lat},${this.state.long}`
-        let res = await axios(url)
-        console.log(res)
+        const api = process.env.REACT_APP_API_KEY_WEATHER
+        const url = `https://api.weatherstack.com/forecast?access_key=${api}&query=${this.state.lat},${this.state.long}`
         this.setState({
           location: res.data.location.name,
           temp: res.data.current.feelslike,
