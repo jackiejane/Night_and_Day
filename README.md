@@ -1,68 +1,179 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Night_and_Day
 
-## Available Scripts
+# Project Overview
+An web-based App that allows users to keep notes about their mood, short-, and long-term goals.
 
-In the project directory, you can run:
+## Project Name
 
-### `yarn start`
+Night_and_Day
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Description
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+"The unexamined life is not worth living" -- the words of Socrates as he defended himself against the claims of corrupting the youth of Athens. These words ring true despite the fact that we will never know if Socrates actually made this decree. As Plato wrote in his description of the trial "I only know that I do not know." Night_and_Day allows users to track their mood and goals, a very important step in understanding our internal, emotional dialouge.  
 
-### `yarn test`
+### Wireframes
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+https://xd.adobe.com/view/a18af1f8-3e1f-4d58-836a-00977547ba15-f4d9/#access_token=eyJ4NXUiOiJpbXNfbmExLWtleS0xLmNlciIsImFsZyI6IlJTMjU2In0.eyJpZCI6IjE1OTMzODgwNDgxMDdfNjVkYjk1ZDEtYTk0MS00YWZmLThmOTMtNDIzZjZkNzlhZWYwX3VlMSIsImNsaWVudF9pZCI6IkNvbWV0V2ViMSIsInVzZXJfaWQiOiI5QzAyMEE2MTVFRUU1REQyMEE0OTVGRDJAQWRvYmVJRCIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJhcyI6Imltcy1uYTEiLCJmZyI6IlVSWjVNT0dIVkxQNTVYNldPTUkzUU9RQUJRPT09PT09Iiwic2lkIjoiMTU5MzM4MzYxOTQ4M180MTA1Zjk5MS1hMDNmLTQ4YjgtOTI0Mi00ZThkM2JjODJkZjNfdWUxIiwibW9pIjoiNTMyYzEwODkiLCJjIjoiUW4yK3M0R1pYczNDL3djVkVwS1BTdz09IiwiZXhwaXJlc19pbiI6Ijg2NDAwMDAwIiwiY3JlYXRlZF9hdCI6IjE1OTMzODgwNDgxMDciLCJzY29wZSI6IiJ9.lN1PqqcIVLJPTP2WJbDRal2T2njVq3gLuf266gjpXYGj8RpAzkSNLIqyHZ4giREsN4Lh4URIeSm8AjzScpuxgEpOBxRGCRxYKSlBKhYBCABCcV3xRytSHVAdU9mKtgZJJ1CLJgibcTjsq31pG1cV58EpHB2xhcuIe1ZIQXRTCUJwUL5vEPvSB3yTs4XFDD68K760_hV6er5jY6eHCQeTbkOysd-DlmZ6jbTlQTVMkT5FD7-Sgeo2MF_sUmdByKjbHTm1qhIXmTa2QNvTgcpZY7xEAwTg_k3syPVt8cnAbjsIpv4ypqQ87bS1LrwcwFu9K0llCCh8C_GiM7xNukiRnw&token_type=bearer&expires_in=86399995
 
-### `yarn build`
+#### MVP Goals
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Create a web-based application that allows users to reflect on their thoughts twice a day. 
+- Uses an API to access NASA photos for the design of the application.
+- Uses React and React Router, to create a multi-page application.
+- Uses two media queries to ensure the app has a responsive design for a wide-range of screen sizes. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### MVP API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+|    API     | Quality Docs? | Documentation | Sample Query                            |
+| :--------: | :-----------: | :------------ | :-------------------------------------- |
+| NASA API |      yes      | https://api.nasa.gov/ | https://api.nasa.gov/planetary/apod?api_key={APIKEY} |
 
-### `yarn eject`
+{
+    "date": "2020-06-28",
+    "explanation": "What are those spots on Jupiter? Largest and furthest, just right of center, is the Great Red Spot -- a huge storm system that has been raging on Jupiter possibly since Giovanni Cassini's likely notation of it 355 years ago.  It is not yet known why this Great Spot is red. The spot toward the lower left is one of Jupiter's largest moons: Europa. Images from Voyager in 1979 bolster the modern hypothesis that Europa has an underground ocean and is therefore a good place to look for extraterrestrial life. But what about the dark spot on the upper right? That is a shadow of another of Jupiter's large moons: Io. Voyager 1 discovered Io to be so volcanic that no impact craters could be found.  Sixteen frames from Voyager 1's flyby of Jupiter in 1979 were recently reprocessed and merged to create the featured image.  About 43 years ago, Voyager 1 launched from Earth and started one of the greatest explorations of the Solar System ever.    Free Download: Voyager Posters",
+    "hdurl": "https://apod.nasa.gov/apod/image/2006/EuropaJupiter_Voyager_2792.jpg",
+    "media_type": "image",
+    "service_version": "v1",
+    "title": "Europa and Jupiter from Voyager 1",
+    "url": "https://apod.nasa.gov/apod/image/2006/EuropaJupiter_Voyager_960.jpg"
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### MVP Libraries & Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+> Use this section to list the key supporting libraries and their role in the project.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+|   Library    | Description                                |
+| :----------: | :----------------------------------------- |
+|    React     | Will be used as the primary structure of the application |
+| React Router | Will be used to support multiple urls |
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### MVP Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Use this section to define your React components and the data architecture of your app.
 
-### Code Splitting
+```
+src
+|__ Main
+|__ Prompt
+|__ Summary
+|__ components/
+      |__ Main/
+          |__Triangle
+          |__MainDay
+          |__MainNight
+      |__ Prompt/
+          |__slider
+          |__subButton
+          |__writingCenter
+      |__Summary/
+          |__Quote
+          |__time
+          |__todo
+          |__weather
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<br>
 
-### Analyzing the Bundle Size
+#### MVP Breakdown
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+|  Component   |    Type    | state | props | hooks | Description                                |
+| :----------: | :--------: | :---: | :---: | :---: | :----------------------------------------- |
+|    App.js    | functional     |   N   |   N   |   N   | Renders all componenets and is exported to index|
+|   Main.js  |   functional    |   N   |   N   |   N   |  Renders Main Page /main |
+| Prompt.js | class | Y | N | N | Renders /prompt |
+| Summary.js | class | Y | N | N | renders /summary |
+| MainDay.js | functional| N | N | N | renders day image on /main |
+| MainNight.js | class | Y | N | N | renders night image on /main |
+| Triangle.js  | functional | N | N | N | renders triangle on /main |
+| slider.js | functional | N | N | N | renders slider on /prompt |
+| subButton.js | functional| N | N | N | renders submit button on /prompt |
+| WritingCenter.js | class | Y | N | N | renders text editor onto /prompt tracks users writing |
+| Quote.js | class | Y | N | N | calls api and renders random quote on page /summary |
+| Time.js | class | Y | N | N | checks time and renders time to /summary |
+| todo.js | class | Y | N | N | renders text editor onto /prompt tracks users writing |
+| weather.js | class | Y | N | N | makes an api call and renders weather data based on the users location |
+|    Index     | functional |   n   |   n   |   y   | renders to DOM |
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### MVP Timeframes
 
-### Advanced Configuration
+| Task             | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------- | :------: | :------------: | :-----------: | :---------: |
+|    App.js    |   H     |     2 hrs      |     2 hrs     |    2 hrs    |
+|   Prompt.js | L (PMVP) | 2hrs | 3hrs | 3hrs |
+| Day.js | H (no longer exists was refactored into prompt.js) | 2hrs | 3hrs | 3hrs |
+| NightMain.js  | H (no longer exists was refactored into prompt.js) | 2 hrs | 2 hrs  |    3 hrs    |
+|   Triangle.js   |    M    |     3 hrs      |     2 hrs     |    2 hrs    |
+|   subButtons.js  |    M      |     2 hrs      |     1 hrs     |    1 hrs    |
+| WritingCenter.js | M | 2hrs | 4hrs | 4hrs |
+| Summary.js | M | 4hrs | 6hrs | 6hrs |
+| Weather.js | L (pmvp) | 3hrs | 5hrs | 5hrs|
+| Quote.js | L (pmvp) | 2hrs | 3hrs | 3hrs |
+| Research | M | | 8hrs| 8hrs|
+| Todo.js | L (pmvp) | 2hrs | 4hrs | 4hrs |
+| Time.js |  M (PMVP) | 2 hrs | 4hrs | 4hrs|
+|    contingency    |        |     5 hrs      |          |        |
+| TOTAL            |          |     32 hrs      |     47hrs   |     47hrs     |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<br>
 
-### Deployment
+### Post-MVP
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+TBD
 
-### `yarn build` fails to minify
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+***
+
+## Project Delivery
+
+> The Project Delivery section should be completed as your work on your project.
+
+### Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+The code below allows us to create an event listner that starts a countdown clock when the user start to type. The function is triggered by an onKeyDown listener. The code below adds a boolean value within state so that the function string is only triggered once.
+```
+resetSec = () => {
+    if (this.state.min > 0) {
+      this.setState({
+        min: this.state.min - 1,
+        sec: 59
+      })
+      this.timeKeeper()
+    }
+  }
+  subtractSec = () => {
+    this.setState({
+      sec: this.state.sec - 1
+    })
+    this.timeKeeper()
+  }
+  timeKeeper = () => {
+    if (this.state.sec > 0) {
+      setTimeout(() => { this.subtractSec() }, 1000)
+    } else if (this.state.sec === 0) {
+      setTimeout(() => { this.resetSec() }, 1000)
+    }
+  }
+  handleTimer = () => {
+    if (this.state.timerOn === true) {
+      this.setState({
+        timerOn: false
+      })
+      this.timeKeeper()
+    }
+  }
+  handleChange(value) {
+    this.setState({
+      text: value
+    })
+  }
+
+```
