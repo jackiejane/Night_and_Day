@@ -9,7 +9,7 @@ export default class Summary extends Component {
   constructor() {
     super();
     this.state = {
-      time: ''
+      time: false
     }
   }
   componentWillMount() {
